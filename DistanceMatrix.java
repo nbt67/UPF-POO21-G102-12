@@ -11,8 +11,8 @@ public class DistanceMatrix implements Matrix{
     }
 
     public void addCity (double x, double y, String name){
-        Point point1 = new Point(x, y, name);
-        cities.add(point1);
+        Point point = new Point(x, y, name);
+        cities.add(point);
     }
     
     public String getCityName (int index){
@@ -33,10 +33,6 @@ public class DistanceMatrix implements Matrix{
             for (int j = 0; j < size; j++){
                 distance = getDistance(i, j);
                 distances.add(j, distance);                
-            } 
-            for (int z = 0; z < size; z++){
-                double dis = distances.get(z);
-                System.out.println(dis);
             }
             matrix.add(i, distances);
         }

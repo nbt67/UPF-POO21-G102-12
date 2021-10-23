@@ -1,4 +1,3 @@
-
 import java.math. *;
 
 public class Point {
@@ -40,6 +39,3 @@ public class Point {
         return distance;
     }
 }
-/*
-*LinkedList<LinkedList<Double>> matrix = new LinkedList<LinkedList<Double>>
-*/
