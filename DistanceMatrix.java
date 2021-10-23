@@ -16,7 +16,7 @@ public class DistanceMatrix implements Matrix{
     }
     
     public String getCityName (int index){
-        Point p = cities.get(0);
+        Point p = cities.get(index);
         return p.getName();
     }
 
