@@ -25,7 +25,7 @@ public class DistanceMatrix implements Matrix{
     }
 
     public void createDistanceMatrix (){
-        Integer size = getNoOfCities();
+        int size = getNoOfCities();
         LinkedList<Double> distances = new LinkedList<Double>();
         double distance = 0;
 
@@ -34,6 +34,10 @@ public class DistanceMatrix implements Matrix{
                 distance = getDistance(i, j);
                 distances.add(j, distance);                
             } 
+            for (int z = 0; z < size; z++){
+                double dis = distances.get(z);
+                System.out.println(dis);
+            }
             matrix.add(i, distances);
         }
     }
