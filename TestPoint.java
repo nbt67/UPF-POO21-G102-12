@@ -1,10 +1,6 @@
-
 public class TestPoint{
     public static void main (String[] args){
         Point point1 = new Point(4, 6, "point1");
-        Point point2 = new Point(5, 8, "point2");
-
-        double distance = point1.distance_bp (point2);
 
         double x = point1.getX();
         System.out.println(x);
