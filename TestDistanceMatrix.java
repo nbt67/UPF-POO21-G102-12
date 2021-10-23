@@ -10,9 +10,5 @@ public class TestDistanceMatrix {
         String st = matrix1.getCityName(0);       
 
         matrix1.createDistanceMatrix();
-
-        DisplayMatrix display = new DisplayMatrix(matrix1);
-        display.setVisible(true);
-        
     }
 }
