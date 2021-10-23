@@ -1,4 +1,4 @@
-package Main;
+
 import java.math. *;
 
 public class Point {

@@ -8,7 +8,6 @@
  *
  * Created on Oct 8, 2012, 3:21:09 PM
  */
-package distancematrix;
 
 /**
  *

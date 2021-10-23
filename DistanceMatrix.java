@@ -1,38 +1,48 @@
-package Main;
-import Main.DistanceMatrix;
-import Main.Point;
 import java.util.LinkedList;
-
-import distancematrix.Matrix;
 
 public class DistanceMatrix {
     private LinkedList<LinkedList<Double>> rows;
     private LinkedList<Point> cities;
     
 
-    public void DistanceMatrix(){
+    public DistanceMatrix(){
+        cities = new LinkedList<Point>();
+        rows = new LinkedList<LinkedList<Double>>();
     }
 
     public void addCity (double x, double y, String name){
         Point point1 = new Point(x, y, name);
-        cities.addLast(point1);
-
+        cities.add(point1);
     }
     
     public String getCityName (Integer index){
-        return cities.get(index);
+        Point p = cities.get(0);
+        return p.getName();
     }
 
-    public Integer geyNoOfCities (){
+    public Integer getNoOfCities (){
         return cities.size();
     }
 
     public void createDistanceMatrix (){
+        Integer size = cities.size();
         
+        for (int i = 0; i <= size; i++){
+            for (int j = 0; j <= size; j++){
+                int distance = .getDistance(i, j);
+
+
+            }  
+        }
+        rows.add(add(distance));
     }
 
-    public Real getDistance (Integer index1, Integer index2){
-
+    public double getDistance (Integer index1, Integer index2){
+        Point point1 = cities.get(index1);
+        Point point2 = cities.get(index2);
+        
+        double distance = point1.distance_bp(point2);
+        return distance;
     }
 
 }    
