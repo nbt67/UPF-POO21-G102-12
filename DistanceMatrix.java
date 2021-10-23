@@ -10,17 +10,13 @@ public class DistanceMatrix {
     private LinkedList<Point> cities;
     
 
-    public void DistanceMatrix (){
+    public void DistanceMatrix(){
     }
 
     public void addCity (double x, double y, String name){
         Point point1 = new Point(x, y, name);
-        cities.add(point1);
+        cities.addLast(point1);
 
-        Point first = cities.get(0);
-        String xd = first.getName();
-
-        System.out.println(xd);
     }
     
     public String getCityName (Integer index){
