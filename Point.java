@@ -37,8 +37,6 @@ public class Point {
     }
     public double distance_bp(Point point){
         double distance = Math.sqrt(Math.pow((x+y), 2)+Math.pow(point.getX()+point.getY(), 2));
-        System.out.println(distance);
-
         return distance;
     }
 }
