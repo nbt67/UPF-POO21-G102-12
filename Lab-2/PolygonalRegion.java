@@ -9,6 +9,10 @@ public class PolygonalRegion{
         
     }
 
+    public draw(){
+        
+    }
+
 
 
 }
