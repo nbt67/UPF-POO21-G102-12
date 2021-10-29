@@ -9,7 +9,7 @@ public class PolygonalRegion{
 
     public double getArea(){
         double determinant = getDeterminant(); 
-        double area = (1/2)*determinant;
+        double area = (0.5)*determinant;
         return area;
     }
 
@@ -22,21 +22,21 @@ public class PolygonalRegion{
         double y = 0;
 
 
-        while (i <= size){
+        while (i < size-1){
             x = (points.get(i)).getX();
             y = (points.get(j)).getY();
             accum += x*y;
             i++;
             j++;
         }
-        x = (points.get(size)).getX();
+        x = (points.get(size-1)).getX();
         y = (points.get(0)).getY();
         accum += x*y;
         
         double accum2 = 0;
         i = 0;
         j = 1;
-        while (i <= size){  // ¿¿¿¿ <= ????
+        while (i < size-1){  // ¿¿¿¿ <= ????
             y = (points.get(i)).getY();
             x = (points.get(j)).getX();
             accum2 += x*y;
@@ -44,9 +44,8 @@ public class PolygonalRegion{
             j++;
         }
         x = (points.get(0)).getX();
-        y = (points.get(size)).getY();
+        y = (points.get(size-1)).getY();
         accum2 += x*y;
-
         return (accum - accum2);
     }
 
