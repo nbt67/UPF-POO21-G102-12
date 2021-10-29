@@ -48,7 +48,8 @@ public class PolygonalRegion{
         return accum -accum2;
     }
 
-    public void draw(Graphics g, double x, double y){
+    public void draw(java.awt.Graphics g){ //The method draw(Graphics, double, double) in the type PolygonalRegion 
+                                                               //is not applicable for the arguments (Graphics)
         
     }
 }
