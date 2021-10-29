@@ -9,12 +9,12 @@ public class MyMap extends javax.swing.JPanel {
 
         LinkedList< Point > points = new LinkedList< Point >();
         points.add( new Point( 10.0, 100.0 , "point1") );
-        points.add( new Point( 150.0, 10.0 , "point1") );
-        points.add( new Point( 290.0, 100.0 , "point1") );
-        points.add( new Point( 290.0, 200.0 , "point1") );
-        points.add( new Point( 150.0, 290.0 , "point1") );
-        points.add( new Point( 10.0, 200.0 , "point1") );
-        
+        points.add( new Point( 150.0, 10.0 , "point2") );
+        points.add( new Point( 290.0, 100.0 , "point3") );
+        points.add( new Point( 290.0, 200.0 , "point4") );
+        points.add( new Point( 150.0, 290.0 , "point5") );
+        points.add( new Point( 10.0, 200.0 , "point6") );
+
         region = new PolygonalRegion( points );
         System.out.println( region.getArea() );
 
