@@ -6,13 +6,15 @@ public class MyMap extends javax.swing.JPanel {
 
     public MyMap() {
         initComponents();
+
         LinkedList< Point > points = new LinkedList< Point >();
-        points.add( new Point( 10, 100 , "") );
-        points.add( new Point( 150, 10 , "") );
-        points.add( new Point( 290, 100 , "") );
-        points.add( new Point( 290, 200 , "") );
-        points.add( new Point( 150, 290 , "") );
-        points.add( new Point( 10, 200 , "") );
+        points.add( new Point( 10.0, 100.0 , "point1") );
+        points.add( new Point( 150.0, 10.0 , "point1") );
+        points.add( new Point( 290.0, 100.0 , "point1") );
+        points.add( new Point( 290.0, 200.0 , "point1") );
+        points.add( new Point( 150.0, 290.0 , "point1") );
+        points.add( new Point( 10.0, 200.0 , "point1") );
+        
         region = new PolygonalRegion( points );
         System.out.println( region.getArea() );
 
