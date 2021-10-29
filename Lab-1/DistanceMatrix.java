@@ -4,7 +4,6 @@ public class DistanceMatrix implements Matrix{
     private LinkedList<LinkedList<Double>> matrix;
     private LinkedList<Point> cities;
     
-
     public DistanceMatrix(){
         cities = new LinkedList<Point>();
         matrix = new LinkedList<LinkedList<Double>>();

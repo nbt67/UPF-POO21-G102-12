@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class Continent {
     private LinkedList<PolygonalRegion> countries;
 
@@ -5,11 +7,11 @@ public class Continent {
         
     }
 
-    public getTotalArea(){
-
+    public double getTotalArea(){
+        return 0.0;
     }
 
-    public draw(Graphics g, double x, double y){
+    public void draw(Graphics g, double x, double y){
         
     }
 }

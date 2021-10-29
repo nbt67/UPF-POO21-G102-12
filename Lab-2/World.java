@@ -7,7 +7,7 @@ public class World {
 
     }
 
-    public draw (Graphics g, double x, double y){
+    public void draw (Graphics g, double x, double y){
 
     }
 }
