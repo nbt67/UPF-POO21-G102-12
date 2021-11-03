@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.awt.Graphics;
 
 public class PolygonalRegion{
     private LinkedList<Point> points;
@@ -50,7 +51,10 @@ public class PolygonalRegion{
     }
 
     public void draw(java.awt.Graphics g){  //The method draw(Graphics, double, double) in the type PolygonalRegion 
-                                            //is not applicable for the arguments (Graphics)
-        //use the graphics class mad by java (look it up in the api) ¿delete the graphics.java file that we have created?
+        Point point1 = points.get(1);
+        //g.drawLine(poin);
+        
+                                           //is not applicable for the arguments (Graphics)
+                                            //use the graphics class mad by java (look it up in the api) ¿delete the graphics.java file that we have created?
     }
 }
