@@ -16,7 +16,7 @@ public class MyWindow extends javax.swing.JFrame {
                 MyMap m = new MyMap();
                 w.add( m );
                 w.setVisible( true );
-                w.pack();
+                w.pack(); 
 
             }
         } );
