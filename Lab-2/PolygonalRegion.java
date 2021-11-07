@@ -9,18 +9,18 @@ public class PolygonalRegion{
     }
 
     public double getArea(){
-        double determinant = getDeterminant(); 
-        double area = (0.5)*determinant;
+        Double determinant = getDeterminant(); 
+        Double area = (0.5)*determinant;
         return area;
     }
 
-    public  double getDeterminant(){
+    public  Double getDeterminant(){
         int size = points.size();
         double accum = 0;
         int i = 0;
         int j = 1;
-        double x = 0;
-        double y = 0;
+        Double x = 0.0;
+        Double y = 0.0;
 
 
         while (i < size-1){
@@ -34,7 +34,7 @@ public class PolygonalRegion{
         y = (points.get(0)).getY();
         accum += x*y;
         
-        double accum2 = 0;
+        Double accum2 = 0.0;
         i = 0;
         j = 1;
         while (i < size-1){  // ¿¿¿¿ <= ????
@@ -51,7 +51,21 @@ public class PolygonalRegion{
     }
 
     public void draw(java.awt.Graphics g){  //The method draw(Graphics, double, double) in the type PolygonalRegion 
-        Point point1 = points.get(1);
+        int size = points.size();
+        Point point1;
+        LinkedList<Integer> xDoubles = new LinkedList<Integer>(); 
+        LinkedList<Integer> yDoubles = new LinkedList<Integer>(); 
+
+        for (int i = 0; i < size; i++){
+            point1 = points.get(i);
+            xDoubles.add(point1.getX());
+            yDoubles.add(point1.getY());
+        }
+
+        draw
+        
+
+        
         //g.drawLine(poin);
         
                                            //is not applicable for the arguments (Graphics)
