@@ -1,5 +1,5 @@
 public class Graphics {
-    public void drawStrings (String s, int x, int y){
+    public void drawString (String s, int x, int y){
         
     }
 

@@ -1,19 +1,19 @@
 public class Point {
-    private int x;
-    private int y;
+    private Integer x;
+    private Integer y;
     private String name;
 
-    public Point (int initX, int initY, String initName){
+    public Point (Integer initX, Integer initY, String initName){
         x = initX;
         y = initY;
         name = initName;
     }
 
-    public int getX(){
+    public Integer getX(){
         return x;
     }
     
-    public int getY (){
+    public Integer getY (){
         return y;
     }
 
