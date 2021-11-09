@@ -11,64 +11,50 @@ public class PolygonalRegion{
     public double getArea(){
         Double determinant = getDeterminant(); 
         Double area = (0.5)*determinant;
+        System.out.println(area);
         return area;
     }
 
     public  Double getDeterminant(){
-        int size = points.size();
-        double accum = 0;
-        int i = 0;
-        int j = 1;
-        double x = 0;
-        double y = 0;
 
-
-        while (i < size-1){
-            x = (points.get(i)).getX();
-            y = (points.get(j)).getY();
-            accum += x*y;
-            i++;
-            j++;
-        }
-        x = (points.get(size-1)).getX();
-        y = (points.get(0)).getY();
-        accum += x*y;
+        int nPoints = points.size();
+        Point point1;
+        Point point2;
+        double side1 = 0;
+        double side2 = 0;
+        double positive = 0;
+        double negative = 0;
         
-        Double accum2 = 0.0;
-        i = 0;
-        j = 1;
-        while (i < size-1){  // ¿¿¿¿ <= ????
-            y = (points.get(i)).getY();
-            x = (points.get(j)).getX();
-            accum2 += x*y;
-            i++;
-            j++;
+        for (int i = 0; i < nPoints-1; i++){
+    
+            point1 = points.get(i);
+            point2 = points.get(i+1);
+            positive = point1.getX()*point2.getY();
+            side1 = side1+positive;
+            negative = point1.getY()*point2.getX();
+            side2 = side2 + negative;
         }
-        x = (points.get(0)).getX();
-        y = (points.get(size-1)).getY();
-        accum2 += x*y;
-        return (accum - accum2);
+        double x1 = points.get(0).getX();
+        double xn = points.get(nPoints-1).getX();
+        double y1 = points.get(0).getY();
+        double yn = points.get(nPoints-1).getY();
+        side1 = side1 + (xn*y1);
+        side2 = side2 + (yn*x1);
+        return side1-side2;
     }
 
     public void draw(java.awt.Graphics g){  //The method draw(Graphics, double, double) in the type PolygonalRegion 
-        int size = points.size();
+        int nPoints = points.size();
         Point point1;
-        int[] xInt = new int[10];
-        int[] yInt = new int[10]; 
-        int x = 0;
-        int y = 0;
+        int[] xInt = new int[nPoints];
+        int[] yInt = new int[nPoints]; 
 
-        for (int i = 0; i < size; i++){
+        for (int i = 0; i < nPoints; i++){
             point1 = points.get(i);
-            x = (int) Math.round(point1.getX());        
-            y = (int) Math.round(point1.getY());
-            xInt[i] = x;
-            yInt[i] = y;
+            xInt[i] = (int) Math.round(point1.getX());        
+            yInt[i] = (int) Math.round(point1.getY()); 
         }
-
-        g.drawPolygon( xInt,  yInt, size);
-        
-
+        g.drawPolygon( xInt,  yInt, nPoints);    
         
         //g.drawLine(poin);
         
