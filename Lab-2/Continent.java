@@ -9,23 +9,24 @@ public class Continent {
 
     public double getTotalArea(){
         int nPolygonalRegions = countries.size();
-        PolygonalRegion c = null;
+        PolygonalRegion c;
         double accum = 0;
 
         for(int i = 0; i<nPolygonalRegions; i++){
             c = countries.get(i);
             accum += c.getArea();
         }    
-
+    
         System.out.println("The area of the continent is: " + accum);
         return accum;
     }
 
     public void draw(java.awt.Graphics g, double x, double y){
         int nPolygonalRegions = countries.size();
+        PolygonalRegion country;
         
         for(int i = 0; i<nPolygonalRegions; i++){
-            PolygonalRegion country = countries.get(i);
+            country = countries.get(i);
             country.draw(g, x, y);
         }      
     }
