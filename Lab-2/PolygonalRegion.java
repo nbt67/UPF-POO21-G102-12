@@ -7,14 +7,14 @@ public class PolygonalRegion{
     public PolygonalRegion (LinkedList<Point> l){
         points = l;
     }
-
+    
     public double getArea(){
         double determinant = getDeterminant(); 
         double area = (0.5)*determinant;
         return area;
     }
 
-    public  Double getDeterminant(){
+    public double getDeterminant(){
         int nPoints = points.size();
         Point point1;
         Point point2;
