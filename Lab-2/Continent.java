@@ -4,19 +4,27 @@ public class Continent {
     private LinkedList<PolygonalRegion> countries;
 
     public Continent(LinkedList<PolygonalRegion> c){
-        
+        countries = c;
     }
 
     public double getTotalArea(){
-        return 0.0;
+        int nPolygonalRegions = countries.size();
+        PolygonalRegion c = null;
+        double accum = 0;
+
+        for(int i = 0; i<nPolygonalRegions; i++){
+            c = countries.get(i);
+            accum += c.getArea();
+        }    
+        return accum;
     }
 
-    public void draw(Graphics g, double x, double y){
+    public void draw(java.awt.Graphics g, double x, double y){
         int nPolygonalRegions = countries.size();
         
         for(int i = 0; i<nPolygonalRegions; i++){
             PolygonalRegion country = countries.get(i);
-            //country.draw(g);
+            country.draw(g);
         }      
     }
 }

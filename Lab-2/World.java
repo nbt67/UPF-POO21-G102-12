@@ -1,19 +1,19 @@
 import java.util.LinkedList;
 
 public class World {
-    private LinkedList<Continent> c;
+    private LinkedList<Continent> continents;
 
     public World (LinkedList<Continent> c){
-
+        continents = c;
     }
 
-    public void draw (Graphics g, double x, double y){
+    public void draw (java.awt.Graphics g, double x, double y){
 
-        int nPolygonalRegions = c.size();
+        int nPolygonalRegions = continents.size();
         
         for(int i = 0; i<nPolygonalRegions; i++){
-            Continent cont = c.get(i);
-            cont.draw(g, y, y);
+            Continent cont = continents.get(i);
+            cont.draw(g, x, y);
         }
     }
 }
