@@ -9,14 +9,12 @@ public class PolygonalRegion{
     }
 
     public double getArea(){
-        Double determinant = getDeterminant(); 
-        Double area = (0.5)*determinant;
-        System.out.println(area);
+        double determinant = getDeterminant(); 
+        double area = (0.5)*determinant;
         return area;
     }
 
     public  Double getDeterminant(){
-
         int nPoints = points.size();
         Point point1;
         Point point2;
@@ -25,25 +23,28 @@ public class PolygonalRegion{
         double positive = 0;
         double negative = 0;
         
-        for (int i = 0; i < nPoints-1; i++){
-    
+        for (int i = 0; i < nPoints-1; i++){    
             point1 = points.get(i);
             point2 = points.get(i+1);
+
             positive = point1.getX()*point2.getY();
             side1 = side1+positive;
+
             negative = point1.getY()*point2.getX();
             side2 = side2 + negative;
         }
+
         double x1 = points.get(0).getX();
         double xn = points.get(nPoints-1).getX();
         double y1 = points.get(0).getY();
         double yn = points.get(nPoints-1).getY();
+        
         side1 = side1 + (xn*y1);
         side2 = side2 + (yn*x1);
         return side1-side2;
     }
 
-    public void draw(java.awt.Graphics g){  //The method draw(Graphics, double, double) in the type PolygonalRegion 
+    public void draw(java.awt.Graphics g, double x, double y){
         int nPoints = points.size();
         Point point1;
         int[] xInt = new int[nPoints];
@@ -55,10 +56,5 @@ public class PolygonalRegion{
             yInt[i] = (int) Math.round(point1.getY()); 
         }
         g.drawPolygon( xInt,  yInt, nPoints);    
-        
-        //g.drawLine(poin);
-        
-                                           //is not applicable for the arguments (Graphics)
-                                            //use the graphics class mad by java (look it up in the api) ¿delete the graphics.java file that we have created?
     }
 }

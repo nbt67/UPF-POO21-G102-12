@@ -7,6 +7,7 @@ public class MyMap extends javax.swing.JPanel {
     public MyMap() {
         initComponents();
 
+        //Points
         LinkedList< Point > points1 = new LinkedList< Point >();
         points1.add( new Point( 10.0, 100.0 , "point1") );
         points1.add( new Point( 150.0, 10.0 , "point2") );
@@ -35,6 +36,7 @@ public class MyMap extends javax.swing.JPanel {
         points4.add( new Point( 60.0, 160.0 , "point3") );
         points4.add( new Point( 10.0, 160.0 , "point4") );
 
+        //PolygonalRegions
         LinkedList< PolygonalRegion > polygonalRegions1 = new LinkedList< PolygonalRegion >();
         polygonalRegions1.add(new PolygonalRegion(points1));
         polygonalRegions1.add(new PolygonalRegion(points2));
@@ -43,13 +45,16 @@ public class MyMap extends javax.swing.JPanel {
         polygonalRegions2.add(new PolygonalRegion(points3));
         polygonalRegions2.add(new PolygonalRegion(points4));
 
+        //Continents
         LinkedList< Continent > myContinents = new LinkedList< Continent >();
         myContinents.add(new Continent(polygonalRegions1));
         myContinents.add(new Continent(polygonalRegions2));
 
-        myworld = new World( myContinents );
+        myContinents.get(0).getTotalArea();
+        myContinents.get(1).getTotalArea();
 
-        //System.out.println(myworld.getArea());
+        //World
+        myworld = new World( myContinents );
     }
 
     private void initComponents() {
@@ -67,8 +72,7 @@ public class MyMap extends javax.swing.JPanel {
 
     public void paint( java.awt.Graphics g ) {
         super.paint( g );
-        myworld.draw( g , 1000, 1000); //The method draw(Graphics, double, double) in the type PolygonalRegion 
-                          //is not applicable for the arguments (Graphics)
+        myworld.draw( g , 1000, 1000);
     }      
 
 }

@@ -16,6 +16,8 @@ public class Continent {
             c = countries.get(i);
             accum += c.getArea();
         }    
+
+        System.out.println("The area of continent is: " + accum);
         return accum;
     }
 
@@ -24,7 +26,7 @@ public class Continent {
         
         for(int i = 0; i<nPolygonalRegions; i++){
             PolygonalRegion country = countries.get(i);
-            country.draw(g);
+            country.draw(g, x, y);
         }      
     }
 }
