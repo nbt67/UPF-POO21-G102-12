@@ -17,7 +17,7 @@ public class Continent {
             accum += c.getArea();
         }    
 
-        System.out.println("The area of continent is: " + accum);
+        System.out.println("The area of the continent is: " + accum);
         return accum;
     }
 
