@@ -12,6 +12,11 @@ public class Continent {
     }
 
     public void draw(Graphics g, double x, double y){
+        int nPolygonalRegions = countries.size();
         
+        for(int i = 0; i<nPolygonalRegions; i++){
+            PolygonalRegion country = countries.get(i);
+            //country.draw(g);
+        }      
     }
 }
