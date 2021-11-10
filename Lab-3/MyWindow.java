@@ -12,7 +12,7 @@ public class MyWindow extends javax.swing.JFrame {
     public static void main( String[] args ) {
         java.awt.EventQueue.invokeLater( new Runnable() {
             public void run() {
-                MyWindow w = new MyWindow();
+                MyWindow w = new MyWindow();s
                 MyMap m = new MyMap();
                 w.add( m );
                 w.setVisible( true );

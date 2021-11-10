@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 public class Country extends PolygonalRegion{
     private String name;
     private LinkedList<City> cities;

@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 public class GeoPoint extends Point{
     private String name;
 
@@ -6,6 +8,12 @@ public class GeoPoint extends Point{
     }
 
     public void draw(java.awt.Graphics g, double x, double y){
+        xInt = (int) Math.round(super.getX());        
+        yInt = (int) Math.round(super.getY()); 
+
+        fillOval(xInt, yInt, x, y);
+        drawString(name, xInt, yInt);
         
+
     }
 }
