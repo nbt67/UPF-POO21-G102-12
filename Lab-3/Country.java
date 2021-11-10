@@ -1,11 +1,12 @@
-public class Country {
+public class Country extends PolygonalRegion{
     private String name;
     private LinkedList<City> cities;
     private LinkedList<Country> neighbors;
     private City capital;
 
     public Country(LinkedList<Point> l, City cap){
-
+        Country.super(l);
+        capital = cap;
     }    
 
     public void addCity(City c){

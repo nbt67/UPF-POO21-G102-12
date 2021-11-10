@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.awt.Graphics;
 
-public class EllipsoidalRegion {
+public class EllipsoidalRegion extends Region{
     private Point c;
     private double r1,r2;
 

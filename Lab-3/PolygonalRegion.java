@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.awt.Graphics;
 
-public class PolygonalRegion{
+public class PolygonalRegion extends Region{
     private LinkedList<Point> points;
 
     public PolygonalRegion (LinkedList<Point> l){
