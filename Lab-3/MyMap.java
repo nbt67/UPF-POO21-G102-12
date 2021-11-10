@@ -41,7 +41,7 @@ public class MyMap extends javax.swing.JPanel {
         myworld = new World( myContinents );
 
         myOval = new GeoPoint(50, 60, "hola");
-    
+        System.out.println("look up for java doc");
 
     }
 
