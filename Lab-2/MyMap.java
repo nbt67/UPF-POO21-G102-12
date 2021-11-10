@@ -17,33 +17,17 @@ public class MyMap extends javax.swing.JPanel {
         points1.add( new Point( 10.0, 200.0 , "hexagonPoint6") );
 
         LinkedList< Point > points2 = new LinkedList< Point >();
-        points2.add( new Point( 20.0, 200.0 , "hexagon2Point1") );
-        points2.add( new Point( 300.0, 20.0 , "hexagon2Point2") );
-        points2.add( new Point( 580.0, 200.0 , "hexagon2Point3") );
-        points2.add( new Point( 580.0, 400.0 , "hexagon2Point4") );
-        points2.add( new Point( 300.0, 580.0 , "hexagon2Point5") );
-        points2.add( new Point( 20.0, 400.0 , "hexagon2Point6") );
-
-        LinkedList< Point > points3 = new LinkedList< Point >();
-        points3.add( new Point( 300.0, 400.0 , "squarePoint1") );
-        points3.add( new Point( 300.0, 500.0 , "squarePoint2") );
-        points3.add( new Point( 400.0, 500.0 , "squarePoint3") );
-        points3.add( new Point( 400.0, 400.0 , "squarePoint4") );
-
-        LinkedList< Point > points4 = new LinkedList< Point >();
-        points4.add( new Point( 10.0, 100.0 , "square2Point1") );
-        points4.add( new Point( 60.0, 100.0 , "square2Point2") );
-        points4.add( new Point( 60.0, 160.0 , "square2Point3") );
-        points4.add( new Point( 10.0, 160.0 , "square2Point4") );
+        points2.add( new Point( 300.0, 300.0 , "squarePoint1") );
+        points2.add( new Point( 400.0, 300.0 , "squarePoint2") );
+        points2.add( new Point( 400.0, 400.0 , "squarePoint3") );
+        points2.add( new Point( 300.0, 400.0 , "squarePoint4") );
 
         //PolygonalRegions
         LinkedList< PolygonalRegion > polygonalRegions1 = new LinkedList< PolygonalRegion >();
         polygonalRegions1.add(new PolygonalRegion(points1));
-        polygonalRegions1.add(new PolygonalRegion(points2));
 
         LinkedList< PolygonalRegion > polygonalRegions2 = new LinkedList< PolygonalRegion >();
-        polygonalRegions2.add(new PolygonalRegion(points3));
-        polygonalRegions2.add(new PolygonalRegion(points4));
+        polygonalRegions2.add(new PolygonalRegion(points2));
 
         //Continents
         LinkedList< Continent > myContinents = new LinkedList< Continent >();
