@@ -39,6 +39,10 @@ public class MyMap extends javax.swing.JPanel {
 
         //World
         myworld = new World( myContinents );
+
+        myOval = new GeoPoint(50, 60, "hola");
+    
+
     }
 
     private void initComponents() {
@@ -56,6 +60,7 @@ public class MyMap extends javax.swing.JPanel {
 
     public void paint( java.awt.Graphics g ) {
         super.paint( g );
+        myOval.draw(g, 50, 60);
         myworld.draw( g , 1000, 1000);
     }      
 }
