@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.List;
 
 public class MyMap extends javax.swing.JPanel {
 
@@ -8,7 +8,7 @@ public class MyMap extends javax.swing.JPanel {
         initComponents();
 
         //Points
-        LinkedList< Point > points1 = new LinkedList< Point >();
+        List< Point > points1 = new List< Point >();
         points1.add( new Point( 10.0, 100.0 , "hexagonPoint1") );
         points1.add( new Point( 150.0, 10.0 , "hexagonPoint2") );
         points1.add( new Point( 290.0, 100.0 , "hexagonPoint3") );
@@ -16,23 +16,23 @@ public class MyMap extends javax.swing.JPanel {
         points1.add( new Point( 150.0, 290.0 , "hexagonPoint5") );
         points1.add( new Point( 10.0, 200.0 , "hexagonPoint6") );
 
-        LinkedList< Point > points2 = new LinkedList< Point >();
+        List< Point > points2 = new List< Point >();
         points2.add( new Point( 300.0, 300.0 , "squarePoint1") );
         points2.add( new Point( 400.0, 300.0 , "squarePoint2") );
         points2.add( new Point( 400.0, 400.0 , "squarePoint3") );
         points2.add( new Point( 300.0, 400.0 , "squarePoint4") );
 
         //PolygonalRegions
-        LinkedList< PolygonalRegion > polygonalRegions1 = new LinkedList< PolygonalRegion >();
-        polygonalRegions1.add(new PolygonalRegion(points1));
+        List< Country > polygonalRegions1 = new List< Country >();
+        polygonalRegions1.add(new Country(points1, "BCN"));
 
         LinkedList< PolygonalRegion > polygonalRegions2 = new LinkedList< PolygonalRegion >();
         polygonalRegions2.add(new PolygonalRegion(points2));
 
         //Continents
-        LinkedList< Continent > myContinents = new LinkedList< Continent >();
-        myContinents.add(new Continent(polygonalRegions1));
-        myContinents.add(new Continent(polygonalRegions2));
+        LinkedList< Country > myContinents = new LinkedList< Country >();
+        myContinents.add(new Country(polygonalRegions1, "BCN"));
+        myContinents.add(new Country(polygonalRegions2));
 
         myContinents.get(0).getTotalArea();
         myContinents.get(1).getTotalArea();
