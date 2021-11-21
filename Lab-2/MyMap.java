@@ -23,11 +23,11 @@ public class MyMap extends javax.swing.JPanel {
         points2.add( new Point( 300.0, 400.0 , "squarePoint4") );
 
         //PolygonalRegions
-        LinkedList< Country > polygonalRegions1 = new LinkedList< Country >();
-        polygonalRegions1.add(new Country(points1));
+        LinkedList< PolygonalRegion > polygonalRegions1 = new LinkedList< PolygonalRegion >();
+        polygonalRegions1.add(new PolygonalRegion(points1));
 
-        LinkedList< Country > polygonalRegions2 = new LinkedList< Country >();
-        polygonalRegions2.add(new Country(points2));
+        LinkedList< PolygonalRegion > polygonalRegions2 = new LinkedList< PolygonalRegion >();
+        polygonalRegions2.add(new PolygonalRegion(points2));
 
         //Continents
         LinkedList< Continent > myContinents = new LinkedList< Continent >();

@@ -15,7 +15,7 @@ public class EllipsoidalRegion extends Region{
         return 0.0;
     }
 
-    public void draw(java.awt.Graphics g){
+    public void draw(java.awt.Graphics g, double x, double y){
 
     }
 }

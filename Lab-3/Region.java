@@ -1,10 +1,6 @@
-public class Region {
+public abstract class Region {
 
-    public double getArea(){
-        return 0.0;
-    }
+    public abstract double getArea();
 
-    public void draw(java.awt.Graphics g, double x, double y){
-
-    }
+    public abstract void draw(java.awt.Graphics g, double x, double y);
 }

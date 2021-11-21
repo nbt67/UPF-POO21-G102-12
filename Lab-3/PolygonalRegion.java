@@ -1,10 +1,10 @@
-import java.util.LinkedList;
+import java.util.List;
 import java.awt.Graphics;
 
 public class PolygonalRegion extends Region{
-    private LinkedList<Point> points;
+    private List<Point> points;
 
-    public PolygonalRegion (LinkedList<Point> l){
+    public PolygonalRegion (List<Point> l){
         points = l;
     }
     

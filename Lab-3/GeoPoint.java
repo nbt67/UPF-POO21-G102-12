@@ -4,14 +4,18 @@ public class GeoPoint extends Point{
     private String name;
 
     public GeoPoint(double xi, double yi, String n){
-        GeoPoint.super(xi, yi, n);
+        super(xi, yi, n);
     }
 
-    public void draw(java.awt.Graphics g, double x, double y){
-        xInt = (int) Math.round(super.getX());        
-        yInt = (int) Math.round(super.getY()); 
+    
 
-        fillOval(xInt, yInt, x, y);
+    public void draw(java.awt.Graphics g, double x, double y){
+        int xInt = (int) Math.round(super.getX());        
+        int yInt = (int) Math.round(super.getY()); 
+        int width = (int) Math.round(x);        
+        int height = (int) Math.round(y);  
+
+        super.fillOval(xInt, yInt, width, height);
         drawString(name, xInt, yInt);
         
 
