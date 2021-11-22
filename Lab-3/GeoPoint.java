@@ -16,8 +16,8 @@ public class GeoPoint extends Point{
         int width = (int) Math.round(x);        
         int height = (int) Math.round(y);  
 
-        //super.fillOval(xInt, yInt, width, height);
-        //drawString(name, xInt, yInt);
+        g.fillOval(xInt, yInt, width, height);
+        g.drawString(name, xInt, yInt);
         
 
     }

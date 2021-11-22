@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.*;
 import java.awt.Graphics;
 
 public class EllipsoidalRegion extends Region{
@@ -16,6 +16,6 @@ public class EllipsoidalRegion extends Region{
     }
 
     public void draw(java.awt.Graphics g, double x, double y){
-
+        g.drawOval((int) Math.round(c.getX()), (int) Math.round(c.getY()), (int) Math.round(r1), (int) Math.round(r2));
     }
 }
