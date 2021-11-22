@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.*;
 import java.awt.Graphics;
 
 public class PolygonalRegion extends Region{

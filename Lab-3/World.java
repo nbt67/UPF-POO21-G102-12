@@ -1,9 +1,9 @@
-import java.util.LinkedList;
+import java.util.*;
 
 public class World {
-    private LinkedList<Continent> continents;
+    private List<Continent> continents;
 
-    public World (LinkedList<Continent> c){
+    public World (List<Continent> c){
         continents = c;
     }
 

@@ -5,6 +5,7 @@ public class GeoPoint extends Point{
 
     public GeoPoint(double xi, double yi, String n){
         super(xi, yi, n);
+        name = n;
     }
 
     
@@ -15,8 +16,8 @@ public class GeoPoint extends Point{
         int width = (int) Math.round(x);        
         int height = (int) Math.round(y);  
 
-        super.fillOval(xInt, yInt, width, height);
-        drawString(name, xInt, yInt);
+        //super.fillOval(xInt, yInt, width, height);
+        //drawString(name, xInt, yInt);
         
 
     }

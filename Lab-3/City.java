@@ -1,7 +1,7 @@
 public class City extends GeoPoint {
     private int numhab;
 
-    public City(int xi, int yi, String n, int h){
+    public City(double xi, double yi, String n, Integer h){
         super(xi, yi, n);
         numhab = h;
     }

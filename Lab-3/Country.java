@@ -1,10 +1,10 @@
 import java.awt.Graphics;
-import java.util.List;
+import java.util.*;
 
 public class Country extends PolygonalRegion{
     private String name;
-    private List <City> cities;
-    private List <Country> neighbors;
+    private ArrayList <City> cities;
+    private ArrayList <Country> neighbors;
     private City capital;
 
     public Country(List<Point> l, City cap){
