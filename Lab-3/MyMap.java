@@ -27,12 +27,12 @@ public class MyMap extends javax.swing.JPanel {
 
         //Cities
         List< City > cities1 = new ArrayList<>();
-        cities1.add(new City (10.0, 60.0, "Girona", 100));
-        City capital1 = new City (10.0, 10.0, "BCN", 500);
+        cities1.add(new City (800.0, 600.0, "Girona", 100));
+        City capital1 = new City (800.0, 550.0, "BCN", 500);
 
         List< City > cities2 = new ArrayList<>();
-        cities2.add(new City (40.0, 30.0, "Zaragoza", 150));
-        City capital2 = new City (50.0, 60.0, "Madrid", 200);
+        cities2.add(new City (200.0, 900.0, "Zaragoza", 150));
+        City capital2 = new City (350.0, 900.0, "Madrid", 200);
 
         //Countries (PolygonalRegions)
         List< Country > polygonalRegions1 = new ArrayList<>();

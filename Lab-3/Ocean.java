@@ -24,8 +24,7 @@ public class Ocean extends PolygonalRegion{
             point1 = points.get(i);
             xInt[i] = (int) Math.round(point1.getX());        
             yInt[i] = (int) Math.round(point1.getY()); 
-        }
-        g.drawPolygon( xInt,  yInt, nPoints);    
+        }  
         g.setColor(c);
         g.fillPolygon(xInt,  yInt, nPoints);
         c = new Color(0,0,0);

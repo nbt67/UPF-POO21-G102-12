@@ -7,6 +7,6 @@ public class City extends GeoPoint {
     }
 
     public void draw(java.awt.Graphics g, double x, double y){
-        super.draw(g, x, y);
+        super.draw(g, 100, 100);
     }
 }

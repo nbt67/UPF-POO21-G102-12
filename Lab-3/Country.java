@@ -31,7 +31,8 @@ public class Country extends PolygonalRegion{
         for(int i = 0; i<nCities; i++){
             city = cities.get(i);
             city.draw(g, x, y);
-            g.drawString(name, (int) Math.round(x), (int) Math.round(y));
-        }           
+        }
+        capital.draw(g, x, y);   
+        g.drawString(name, (int) Math.round(capital.getX()-20), (int) Math.round(capital.getY()-20));        
     }
 }
