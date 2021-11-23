@@ -24,10 +24,15 @@ public class MyMap extends javax.swing.JPanel {
 
         //PolygonalRegions
         List< Country > polygonalRegions1 = new ArrayList<>();
-        polygonalRegions1.add( new Country(points1, new City (10.0, 10.0, "BCN", 1000) ));
+        Country country1 = new Country(points1, new City (10.0, 10.0, "BCN", 500) );        
+        //country1.addCity(new City (10.0, 60.0, "Girona", 100));
+        polygonalRegions1.add(country1);
+    
 
         List< Country > polygonalRegions2 = new ArrayList<>();
-        polygonalRegions2.add( new Country(points2, new City (20.0, 20.0, "Madrid", 2000) ));
+        Country country2 = new Country(points2, new City (50.0, 60.0, "Madrid", 200) );   
+        //country2.addCity(new City (40.0, 30.0, "Zaragoza", 150));
+        polygonalRegions2.add(country2);
 
         //Continents
         List< Continent > myContinents = new ArrayList<>();
@@ -59,8 +64,6 @@ public class MyMap extends javax.swing.JPanel {
 
     public void paint( java.awt.Graphics g ) {
         super.paint( g );
-        GeoPoint myOval = new GeoPoint(50.0, 60.0, "hola");
-        myOval.draw(g, 50, 60);
-        myworld.draw( g , 1000, 1000);
+        myworld.draw( g , 100, 100);
     }      
 }
