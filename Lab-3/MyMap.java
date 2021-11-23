@@ -4,6 +4,8 @@ public class MyMap extends javax.swing.JPanel {
 
     private World myworld;
     private EllipsoidalRegion myEllipsoidalRegion;
+    private Ocean myOcean;
+    private Lake myLake;
 
     public MyMap() {
         initComponents();
@@ -53,6 +55,22 @@ public class MyMap extends javax.swing.JPanel {
         Point p1 = new Point(200.0, 300.0, "point");
         myEllipsoidalRegion = new EllipsoidalRegion(p1, 100, 350);
 
+        //Ocean
+        List< Point > pointsOcean = new ArrayList<>();
+        pointsOcean.add( new Point( 600.0, 600.0 , "oceanPoint1") );
+        pointsOcean.add( new Point( 700.0, 600.0 , "oceanPoint2") );
+        pointsOcean.add( new Point( 700.0, 700.0 , "oceanPoint3") );
+        pointsOcean.add( new Point( 600.0, 700.0 , "oceanPoint4") );
+        myOcean = new Ocean(pointsOcean);
+
+        //Lake 
+        List< Point > pointsLake = new ArrayList<>();
+        pointsLake.add( new Point( 900.0, 500.0 , "lakePoint1") );
+        pointsLake.add( new Point( 600.0, 600.0 , "lakePoint2") );
+        pointsLake.add( new Point( 500.0, 700.0 , "lakePoint3") );
+        pointsLake.add( new Point( 400.0, 500.0 , "lakePoint4") );
+        myLake = new Lake(pointsLake);
+
         //World
         myworld = new World( myContinents );
     }
@@ -72,6 +90,8 @@ public class MyMap extends javax.swing.JPanel {
 
     public void paint( java.awt.Graphics g ) {
         super.paint( g );
+        myOcean.draw(g, 100, 100);
+        myLake.draw(g, 100, 100);
         myEllipsoidalRegion.draw(g, 100, 100);
         myworld.draw( g , 100, 100);
     }      

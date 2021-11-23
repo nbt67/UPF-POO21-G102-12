@@ -2,7 +2,7 @@ import java.util.*;
 import java.awt.Graphics;
 
 public class PolygonalRegion extends Region{
-    private List<Point> points;
+    public List<Point> points;
 
     public PolygonalRegion (List<Point> l){
         points = l;
