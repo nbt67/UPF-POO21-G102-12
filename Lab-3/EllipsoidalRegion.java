@@ -12,7 +12,8 @@ public class EllipsoidalRegion extends Region{
     }
 
     public double getArea(){
-        return 0.0;
+        double area = Math.PI * r1 * r2;
+        return area;
     }
 
     public void draw(java.awt.Graphics g, double x, double y){

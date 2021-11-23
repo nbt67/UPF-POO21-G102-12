@@ -17,10 +17,7 @@ public class MyWindow extends javax.swing.JFrame {
                 w.add( m );
                 w.setVisible( true );
                 w.pack(); 
-
             }
         } );
     }
-
 }
-

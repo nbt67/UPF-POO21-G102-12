@@ -9,12 +9,6 @@ public class PolygonalRegion extends Region{
     }
     
     public double getArea(){
-        double determinant = getDeterminant(); 
-        double area = (0.5)*determinant;
-        return area;
-    }
-
-    public double getDeterminant(){
         int nPoints = points.size();
         Point point1;
         Point point2;
@@ -41,7 +35,10 @@ public class PolygonalRegion extends Region{
         
         side1 = side1 + (xn*y1);
         side2 = side2 + (yn*x1);
-        return side1-side2;
+
+        double determinant = side1-side2;
+        double area = (0.5)*determinant;
+        return area;
     }
 
     public void draw(java.awt.Graphics g, double x, double y){

@@ -33,7 +33,7 @@ public class Point {
         this.name = newName;
     }
     public double distance_bp(Point point){
-        double distance = Math.sqrt(Math.pow((x+y), 2)+Math.pow(point.getX()+point.getY(), 2));
+        double distance = Math.sqrt(Math.pow((x + y), 2) + Math.pow(point.getX() + point.getY(), 2));
         return distance;
     }
 }

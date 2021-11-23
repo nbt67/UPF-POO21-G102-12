@@ -3,6 +3,7 @@ import java.util.*;
 public class MyMap extends javax.swing.JPanel {
 
     private World myworld;
+    private EllipsoidalRegion myEllipsoidalRegion;
 
     public MyMap() {
         initComponents();
@@ -31,7 +32,7 @@ public class MyMap extends javax.swing.JPanel {
         cities2.add(new City (40.0, 30.0, "Zaragoza", 150));
         City capital2 = new City (50.0, 60.0, "Madrid", 200);
 
-        //PolygonalRegions
+        //Countries (PolygonalRegions)
         List< Country > polygonalRegions1 = new ArrayList<>();
         Country country1 = new Country(points1, capital1, "France", cities1);        
         polygonalRegions1.add(country1);
@@ -48,11 +49,12 @@ public class MyMap extends javax.swing.JPanel {
         myContinents.get(0).getTotalArea();
         myContinents.get(1).getTotalArea();
 
+        //EllipsoidalRegion
+        Point p1 = new Point(200.0, 300.0, "point");
+        myEllipsoidalRegion = new EllipsoidalRegion(p1, 100, 350);
+
         //World
         myworld = new World( myContinents );
-
-        System.out.println("look up for java doc");
-
     }
 
     private void initComponents() {
@@ -70,6 +72,7 @@ public class MyMap extends javax.swing.JPanel {
 
     public void paint( java.awt.Graphics g ) {
         super.paint( g );
+        myEllipsoidalRegion.draw(g, 100, 100);
         myworld.draw( g , 100, 100);
     }      
 }
