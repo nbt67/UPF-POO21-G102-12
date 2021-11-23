@@ -34,7 +34,6 @@ public class MyMap extends javax.swing.JPanel {
         myContinents.add(new Continent(polygonalRegions1));
         myContinents.add(new Continent(polygonalRegions2));
 
-        //
         myContinents.get(0).getTotalArea();
         myContinents.get(1).getTotalArea();
 
