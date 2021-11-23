@@ -31,8 +31,8 @@ public class MyMap extends javax.swing.JPanel {
 
         //Continents
         LinkedList< Continent > myContinents = new LinkedList< Continent >();
-        myContinents.add(new Continent(polygonalRegions1));
-        myContinents.add(new Continent(polygonalRegions2));
+        //myContinents.add(new Continent(polygonalRegions1));
+        //myContinents.add(new Continent(polygonalRegions2));
 
         myContinents.get(0).getTotalArea();
         myContinents.get(1).getTotalArea();

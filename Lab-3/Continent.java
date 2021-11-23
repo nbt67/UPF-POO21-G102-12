@@ -23,7 +23,7 @@ public class Continent {
 
     public void draw(java.awt.Graphics g, double x, double y){
         int nPolygonalRegions = countries.size();
-        PolygonalRegion country;
+        Country country;
         
         for(int i = 0; i<nPolygonalRegions; i++){
             country = countries.get(i);

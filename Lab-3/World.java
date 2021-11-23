@@ -8,10 +8,10 @@ public class World {
     }
 
     public void draw (java.awt.Graphics g, double x, double y){
-        int nPolygonalRegions = continents.size();
+        int nCountries = continents.size();
         Continent cont;
         
-        for(int i = 0; i<nPolygonalRegions; i++){
+        for(int i = 0; i<nCountries; i++){
             cont = continents.get(i);
             cont.draw(g, x, y);
         }

@@ -7,8 +7,10 @@ public class Country extends PolygonalRegion{
     private List <Country> neighbors;
     private City capital;
 
-    public Country(List<Point> l, City cap){
+    public Country(List<Point> l, City cap, String countryName, List<City> c){
         super(l);
+        name = countryName;
+        cities = c;
         capital = cap;
     }
 
@@ -21,11 +23,15 @@ public class Country extends PolygonalRegion{
     }
 
     public void draw(java.awt.Graphics g, double x, double y){
-        int i = 1;
-        //cities.get(i).super.draw(g, x, y);
-        //Iterate by all the cities(polygonal regions) and draw all of them. Then get the name and cal draw string??
-        
+        int nCities = cities.size();
+        City city;
+        System.out.println("Drawing Country:" + name);
         super.draw(g, x, y);
-        g.drawString(name, (int) Math.round(x), (int) Math.round(y));
+
+        for(int i = 0; i<nCities; i++){
+            city = cities.get(i);
+            city.draw(g, x, y);
+            g.drawString(name, (int) Math.round(x), (int) Math.round(y));
+        }           
     }
 }
