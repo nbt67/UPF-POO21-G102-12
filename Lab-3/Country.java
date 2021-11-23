@@ -7,8 +7,10 @@ public class Country extends PolygonalRegion{
     private List <Country> neighbors;
     private City capital;
 
-    public Country(List<Point> l, City cap){
+    public Country(List<Point> l, City cap, String countryName, List<City> c){
         super(l);
+        name = countryName;
+        cities = c;
         capital = cap;
     }
 
@@ -23,6 +25,7 @@ public class Country extends PolygonalRegion{
     public void draw(java.awt.Graphics g, double x, double y){
         int nCities = cities.size();
         City city;
+        System.out.println("Drawing Country:" + name);
         super.draw(g, x, y);
 
         for(int i = 0; i<nCities; i++){

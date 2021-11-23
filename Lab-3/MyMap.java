@@ -16,22 +16,28 @@ public class MyMap extends javax.swing.JPanel {
         points1.add( new Point( 150.0, 290.0 , "hexagonPoint5") );
         points1.add( new Point( 10.0, 200.0 , "hexagonPoint6") );
 
-        List< Point > points2 = new ArrayList< >();
+        List< Point > points2 = new ArrayList<>();
         points2.add( new Point( 300.0, 300.0 , "squarePoint1") );
         points2.add( new Point( 400.0, 300.0 , "squarePoint2") );
         points2.add( new Point( 400.0, 400.0 , "squarePoint3") );
         points2.add( new Point( 300.0, 400.0 , "squarePoint4") );
 
+        //Cities
+        List< City > cities1 = new ArrayList<>();
+        cities1.add(new City (10.0, 60.0, "Girona", 100));
+        City capital1 = new City (10.0, 10.0, "BCN", 500);
+
+        List< City > cities2 = new ArrayList<>();
+        cities2.add(new City (40.0, 30.0, "Zaragoza", 150));
+        City capital2 = new City (50.0, 60.0, "Madrid", 200);
+
         //PolygonalRegions
         List< Country > polygonalRegions1 = new ArrayList<>();
-        Country country1 = new Country(points1, new City (10.0, 10.0, "BCN", 500) );        
-        //country1.addCity(new City (10.0, 60.0, "Girona", 100));
+        Country country1 = new Country(points1, capital1, "France", cities1);        
         polygonalRegions1.add(country1);
     
-
         List< Country > polygonalRegions2 = new ArrayList<>();
-        Country country2 = new Country(points2, new City (50.0, 60.0, "Madrid", 200) );   
-        //country2.addCity(new City (40.0, 30.0, "Zaragoza", 150));
+        Country country2 = new Country(points2, capital2, "Spain", cities2);   
         polygonalRegions2.add(country2);
 
         //Continents
