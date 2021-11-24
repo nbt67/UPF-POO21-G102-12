@@ -31,8 +31,8 @@ public class MyMap extends javax.swing.JPanel {
         City capital1 = new City (800.0, 550.0, "Lyon", 500);
 
         List< City > cities2 = new ArrayList<>();
-        cities2.add(new City (200.0, 900.0, "BCN", 150));
-        City capital2 = new City (350.0, 900.0, "Girona", 200);
+        cities2.add(new City (500.0, 200.0, "BCN", 150));
+        City capital2 = new City (550.0, 200.0, "Girona", 200);
 
         //Countries (PolygonalRegions)
         List< Country > polygonalRegions1 = new ArrayList<>();
