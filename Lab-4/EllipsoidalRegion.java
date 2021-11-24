@@ -16,7 +16,19 @@ public class EllipsoidalRegion extends Region{
         return area;
     }
 
-    public void draw(java.awt.Graphics g, double x, double y){
+    public void draw(java.awt.Graphics g){
         g.drawOval((int) Math.round(c.getX()), (int) Math.round(c.getY()), (int) Math.round(r1), (int) Math.round(r2));
+    }
+
+    public void move(Vector v) {
+
+    }
+
+    public boolean isSelected(Point p) {
+        return true;
+    }
+
+    public boolean isPointInside(Point p) {
+        return false;
     }
 }
