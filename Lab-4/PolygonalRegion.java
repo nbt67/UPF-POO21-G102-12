@@ -41,7 +41,7 @@ public class PolygonalRegion extends Region{
         return area;
     }
 
-    public void draw(java.awt.Graphics g, double x, double y){
+    public void draw(java.awt.Graphics g){
         int nPoints = points.size();
         Point point1;
         int[] xInt = new int[nPoints];
@@ -53,5 +53,17 @@ public class PolygonalRegion extends Region{
             yInt[i] = (int) Math.round(point1.getY()); 
         }
         g.drawPolygon( xInt,  yInt, nPoints);    
+    }
+
+    public boolean isPointInside(Point p) {
+        return false;
+    }
+    
+    public void move(Vector v) {
+        
+    }
+
+    public boolean isSelected(Point p) {
+        return false;
     }
 }
