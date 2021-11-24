@@ -25,7 +25,6 @@ public class Country extends PolygonalRegion{
     public void draw(java.awt.Graphics g, double x, double y){
         int nCities = cities.size();
         City city;
-        System.out.println("Drawing Country:" + name);
         super.draw(g, x, y);
 
         for(int i = 0; i<nCities; i++){
