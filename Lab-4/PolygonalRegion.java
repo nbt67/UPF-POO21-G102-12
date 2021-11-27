@@ -1,5 +1,6 @@
 import java.util.*;
 import java.awt.Graphics;
+import java.awt.Polygon;
 
 public class PolygonalRegion extends Region{
     public List<Point> points;
@@ -52,15 +53,30 @@ public class PolygonalRegion extends Region{
             xInt[i] = (int) Math.round(point1.getX());        
             yInt[i] = (int) Math.round(point1.getY()); 
         }
-        g.drawPolygon( xInt,  yInt, nPoints);  
+        Polygon p = new Polygon(xInt, yInt, nPoints);
+        g.drawPolygon(p);  
 
         g.setColor( super.getFillColor() );
-        g.fillPolygon( ... );
-        g.setColor( lineColor );
-        g.drawPolygon( ... );  
+        g.fillPolygon(p);
+        g.setColor( super.lineColor );
+        g.drawPolygon(p);  
     }
 
     public boolean isPointInside(Point p) {
+        int nPoints = points.size();
+        Point point1;
+        for (int i = 0; i < nPoints; i++){
+            point1 = points.get(i);
+            //difference
+
+            //xInt[i] = (int) Math.round(point1.getX());        
+            //yInt[i] = (int) Math.round(point1.getY()); 
+        }
+
+
+
+
+
         return false;
     }
     
@@ -72,8 +88,4 @@ public class PolygonalRegion extends Region{
         return false;
     }
 
-    public void move(java.util.Vector v) {
-        // TODO Auto-generated method stub
-        
-    }
 }

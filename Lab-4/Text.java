@@ -1,5 +1,4 @@
 import java.awt.Graphics;
-import java.util.Vector;
 
 public class Text extends Entity{
     private Point c;
@@ -8,7 +7,7 @@ public class Text extends Entity{
     public Text (Point ci, String ti){
         c = ci;
         text = ti;
-        super()
+        //super()
     }
 
     public void draw(Graphics g) {

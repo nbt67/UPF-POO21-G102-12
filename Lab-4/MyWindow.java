@@ -13,10 +13,11 @@ public class MyWindow extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater( new Runnable() {
             public void run() {
                 MyWindow w = new MyWindow();
-                MyMap m = new MyMap();
-                w.add( m );
+                EntityDrawer entityDrawer = new EntityDrawer();
+                w.add( entityDrawer );
                 w.setVisible( true );
-                w.pack(); 
+                w.pack();        
+
             }
         } );
     }

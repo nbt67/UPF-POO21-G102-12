@@ -1,11 +1,13 @@
+import java.awt.Color;
+
 public abstract class Region extends Entity{
-    private Color fillColor;
+    private java.awt.Color fillColor;
 
     public Region(){
 
     }
     
-    public void setFillColor(Color c){
+    public void setFillColor(java.awt.Color c){
         fillColor = c;
     }
 

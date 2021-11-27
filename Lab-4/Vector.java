@@ -1,6 +1,8 @@
 public class Vector {
     public double vx, vy;
 
+    //extends Point?
+
     public Vector(double vxi,double vyi){
         vx = vxi;
         vy = vyi;

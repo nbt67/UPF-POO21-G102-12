@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.Vector;
 import java.awt.Graphics;
 
 public class DrawApp {
