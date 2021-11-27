@@ -17,7 +17,7 @@ public class MyWindow extends javax.swing.JFrame {
                 w.add( entityDrawer );
                 w.setVisible( true );
                 w.pack();        
-
+                System.out.println("Also, order your code in subfolders and use package of java to call it");
             }
         } );
     }
