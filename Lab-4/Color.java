@@ -1,4 +1,4 @@
-public class Color {
+public class Color{
     private double x;
     private double y;
     private double z;

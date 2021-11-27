@@ -32,8 +32,8 @@ public class DrawApp {
 
     }
     
-    public void move ( int dx, int dy ){
+    public void move ( Vector v){
         for ( int i = 0; i < entities.size(); ++i )
-            entities.get( i ).move( dx, dy );
+            entities.get( i ).move( v );
     }
 }

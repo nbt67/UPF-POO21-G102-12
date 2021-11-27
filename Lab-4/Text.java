@@ -15,7 +15,7 @@ public class Text extends Entity{
         
     }
 
-    public void move(int dx, int dy) {
+    public void move(Vector v) {
         
     }
 

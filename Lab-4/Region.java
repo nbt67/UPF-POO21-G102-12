@@ -1,12 +1,16 @@
 public abstract class Region extends Entity{
     private Color fillColor;
 
-    public Region(Color lcinit){
-        super(lcinit);
+    public Region(){
+
     }
     
     public void setFillColor(Color c){
+        fillColor = c;
+    }
 
+    public Color getFillColor(){
+        return fillColor;
     }
 
     public abstract double getArea();    

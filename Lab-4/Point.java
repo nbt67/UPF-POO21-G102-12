@@ -36,4 +36,13 @@ public class Point {
         double distance = Math.sqrt(Math.pow((x + y), 2) + Math.pow(point.getX() + point.getY(), 2));
         return distance;
     }
+
+    public void move (double vx, double vy){
+
+    }
+
+    public Vector difference (Point p1, Point p2){
+        Vector v = new Vector(p1.x-p2.x,p1.y-p2.y);
+        return v;
+    }
 }

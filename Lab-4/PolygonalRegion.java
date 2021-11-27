@@ -52,7 +52,12 @@ public class PolygonalRegion extends Region{
             xInt[i] = (int) Math.round(point1.getX());        
             yInt[i] = (int) Math.round(point1.getY()); 
         }
-        g.drawPolygon( xInt,  yInt, nPoints);    
+        g.drawPolygon( xInt,  yInt, nPoints);  
+
+        g.setColor( super.getFillColor() );
+        g.fillPolygon( ... );
+        g.setColor( lineColor );
+        g.drawPolygon( ... );  
     }
 
     public boolean isPointInside(Point p) {
@@ -67,7 +72,8 @@ public class PolygonalRegion extends Region{
         return false;
     }
 
-    public void draw(Graphics g, double x, double y) {
-        // TODO Auto-generated method stub       
+    public void move(java.util.Vector v) {
+        // TODO Auto-generated method stub
+        
     }
 }
