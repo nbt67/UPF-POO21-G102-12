@@ -92,7 +92,7 @@ public class MyMap extends javax.swing.JPanel {
         super.paint( g );
         myOcean.draw(g, 100, 100);
         myLake.draw(g, 100, 100);
-        myEllipsoidalRegion.draw(g);
+        myEllipsoidalRegion.draw(g, 100, 100);
         myworld.draw( g , 100, 100);
     }      
 }

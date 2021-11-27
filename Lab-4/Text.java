@@ -6,14 +6,16 @@ public class Text extends Entity{
     private String text;
 
     public Text (Point ci, String ti){
-
+        c = ci;
+        text = ti;
+        super()
     }
 
     public void draw(Graphics g) {
         
     }
 
-    public void move(Vector v) {
+    public void move(int dx, int dy) {
         
     }
 

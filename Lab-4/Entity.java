@@ -3,11 +3,11 @@ import java.awt.Graphics;
 import java.util.Vector;
 
 public abstract class Entity {
-    private Color color;
+    protected Color lineColor;
     private double alpha;
 
-    public Entity(){
-
+    public Entity(Color lcinit){
+        lineColor = lcinit;
     }
 
     public abstract void draw(java.awt.Graphics g);
@@ -25,7 +25,8 @@ public abstract class Entity {
 
     }
 
-    public abstract void move(Vector v);
+    public abstract void move( int dx, int dy );    
+    //int dx, int dy or Vector v?
 
     public abstract boolean isSelected(Point p);
 }

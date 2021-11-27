@@ -31,4 +31,9 @@ public class EllipsoidalRegion extends Region{
     public boolean isPointInside(Point p) {
         return false;
     }
+
+    public void draw(Graphics g, double x, double y) {
+        // TODO Auto-generated method stub
+        
+    }
 }

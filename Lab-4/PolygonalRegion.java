@@ -66,4 +66,8 @@ public class PolygonalRegion extends Region{
     public boolean isSelected(Point p) {
         return false;
     }
+
+    public void draw(Graphics g, double x, double y) {
+        // TODO Auto-generated method stub       
+    }
 }

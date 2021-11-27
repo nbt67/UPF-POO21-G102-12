@@ -1,20 +1,23 @@
-import java.util.List;
+import java.util.*;
 import java.util.Vector;
+import java.awt.Graphics;
 
 public class DrawApp {
     private List<Entity> entities;
     private List<Entity> select;
 
     public DrawApp(){
-
+        entities = new ArrayList<>();
     }
 
     public void addEntity(Entity e){
-
+        entities.add( e );
     }
 
     public void draw(java.awt.Graphics g){
-
+        //super.paintComponent(g);
+		for ( int i = 0; i < entities.size(); ++i )
+            entities.get( i ).draw( g );
     }
 
     private List<Entity> selected (Point p){
@@ -29,7 +32,8 @@ public class DrawApp {
 
     }
     
-    public void move (Vector v){
-
+    public void move ( int dx, int dy ){
+        for ( int i = 0; i < entities.size(); ++i )
+            entities.get( i ).move( dx, dy );
     }
 }
