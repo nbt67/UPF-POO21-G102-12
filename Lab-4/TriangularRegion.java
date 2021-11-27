@@ -8,4 +8,8 @@ public class TriangularRegion extends PolygonalRegion {
         //This is what Bernat wrote in class, idk if it's correct or it works with our code
 
     }
+    
+    public double getArea(){
+        return 0.0;
+    }
 }

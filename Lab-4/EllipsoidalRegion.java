@@ -16,8 +16,11 @@ public class EllipsoidalRegion extends Region{
         return area;
     }
 
-    public void draw(java.awt.Graphics g){
-        g.drawOval((int) Math.round(c.getX()), (int) Math.round(c.getY()), (int) Math.round(r1), (int) Math.round(r2));
+    public void draw(java.awt.Graphics g){       
+        g.setColor( super.getFillColor() );
+        g.fillOval((int) Math.round(c.getX()), (int) Math.round(c.getY()), (int) Math.round(r1), (int) Math.round(r2));
+        g.setColor( super.lineColor );
+        g.drawOval((int) Math.round(c.getX()), (int) Math.round(c.getY()), (int) Math.round(r1), (int) Math.round(r2));  
     }
 
     public void move(Vector v) {
@@ -25,15 +28,17 @@ public class EllipsoidalRegion extends Region{
     }
 
     public boolean isSelected(Point p) {
+
+
         return true;
     }
 
     public boolean isPointInside(Point p) {
-        return false;
-    }
-
-    public void draw(Graphics g, double x, double y) {
-        // TODO Auto-generated method stub
-        
+        double result = (Math.pow((p.getX()-c.getX()), 2)/Math.pow(r1, 2)+Math.pow((p.getY()-c.getY()), 2)/Math.pow(r2, 2));
+        if (result <=1){
+            return true;
+        }else {
+            return false;
+        }
     }
 }

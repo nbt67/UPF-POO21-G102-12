@@ -64,20 +64,47 @@ public class PolygonalRegion extends Region{
 
     public boolean isPointInside(Point p) {
         int nPoints = points.size();
-        Point point1;
+        Point point1, point2;
+        Vector crossProduct1, crossProduct2;
+        double result;
+        int negative = 0, positive = 0;
+
         for (int i = 0; i < nPoints; i++){
             point1 = points.get(i);
-            //difference
+            point2 = points.get(i+1);
 
-            //xInt[i] = (int) Math.round(point1.getX());        
-            //yInt[i] = (int) Math.round(point1.getY()); 
+            crossProduct1 = point1.difference(point2, point1);
+            crossProduct2 = point1.difference(p, point1);
+
+            result = crossProduct1.crossProduct(crossProduct1, crossProduct2);
+
+            if (result>0){
+                positive++;
+            } else if (result>0){
+                negative++;
+            }
+        }
+        point1 = points.get(nPoints);
+        point2 = points.get(1);
+
+        crossProduct1 = point1.difference(point2, point1);
+        crossProduct2 = point1.difference(p, point1);
+
+        result = crossProduct1.crossProduct(crossProduct1, crossProduct2);
+
+        if (result>0){
+            positive++;
+        } else if (result>0){
+            negative++;
         }
 
-
-
-
-
-        return false;
+        if (positive == nPoints){
+            return true;
+        }  else if (negative == nPoints){
+            return true;
+        } else{
+            return false;
+        }
     }
     
     public void move(Vector v) {

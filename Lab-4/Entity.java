@@ -20,7 +20,7 @@ public abstract class Entity {
     }
 
     public void rotate(double a){
-
+        
     }
 
     public abstract void move( Vector v );    
