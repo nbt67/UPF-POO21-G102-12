@@ -11,6 +11,7 @@ public class Text extends Entity{
     }
 
     public void draw(Graphics g) {
+        //Color color1 = new Color (g.getColor());
         g.drawString(text, (int) Math.round(c.getY()), (int) Math.round(c.getX()));   
     }
 
