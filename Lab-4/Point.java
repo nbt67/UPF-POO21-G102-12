@@ -38,7 +38,8 @@ public class Point {
     }
 
     public void move (double vx, double vy){
-
+        setX(x+vx);
+        setY(y+vy);
     }
 
     public Vector difference (Point p1, Point p2){
