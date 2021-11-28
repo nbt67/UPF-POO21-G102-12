@@ -24,7 +24,7 @@ public class EllipsoidalRegion extends Region{
     }
 
     public void move(Vector v) {
-
+        c.move(v.vy, v.vy);
     }
 
     public boolean isSelected(Point p) {

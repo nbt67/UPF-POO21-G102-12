@@ -108,7 +108,13 @@ public class PolygonalRegion extends Region{
     }
     
     public void move(Vector v) {
-        
+        int nPoints = points.size();
+        Point point1;
+
+        for (int i = 0; i < nPoints; i++){
+            point1 = points.get(i);
+            point1.move(v.vx, v.vy);
+        }
     }
 
     public boolean isSelected(Point p) {

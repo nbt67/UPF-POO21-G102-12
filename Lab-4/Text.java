@@ -11,11 +11,11 @@ public class Text extends Entity{
     }
 
     public void draw(Graphics g) {
-        
+        g.drawString(text, (int) Math.round(c.getY()), (int) Math.round(c.getX()));   
     }
 
     public void move(Vector v) {
-        
+        c.move(v.vx, v.vy);
     }
 
     public boolean isSelected(Point p) {
