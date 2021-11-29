@@ -2,7 +2,6 @@ public class Line extends Entity{
     Point p1, p2;
 
     public Line(Point pi1, Point pi2){
-        super();
         p1 = pi1;
         p2 = pi2;
     }

@@ -35,7 +35,7 @@ public class EllipsoidalRegion extends Region{
 
     public boolean isPointInside(Point p) {
         double result = (Math.pow((p.getX()-c.getX()), 2)/Math.pow(r1, 2)+Math.pow((p.getY()-c.getY()), 2)/Math.pow(r2, 2));
-        if (result <=1){
+        if (result <= 1){
             return true;
         }else {
             return false;

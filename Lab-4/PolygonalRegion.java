@@ -120,5 +120,4 @@ public class PolygonalRegion extends Region{
     public boolean isSelected(Point p) {
         return false;
     }
-
 }

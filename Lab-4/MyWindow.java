@@ -59,6 +59,25 @@ public class MyWindow extends javax.swing.JFrame {
 
                 entityDrawer.addDrawable(ellipse1);
 
+                //Rectangular Region (it doesn't work, how are we supposed to draw a rectangle with 2 points, change structure of the class to the one given in pdf)
+                Point rectangular1 = new Point (400, 200, "rectangularPoint1");
+                Point rectangular2 = new Point (450, 250, "rectangularPoint1");
+                RectangularRegion rectangularRegion = new RectangularRegion(rectangular1, rectangular2);
+
+                rectangularRegion.setFillColor(green);
+                rectangularRegion.setColor(black);
+
+                entityDrawer.addDrawable(rectangularRegion);
+
+                //Circular Region
+                Point circularPoint = new Point (500, 60, "circularPoint");
+                CircularRegion circularRegion= new CircularRegion(circularPoint, 50);
+
+                circularRegion.setFillColor(green);
+                circularRegion.setColor(black);
+
+                entityDrawer.addDrawable(circularRegion);
+
                 w.add( entityDrawer );
                 w.setVisible( true );
                 w.pack();        

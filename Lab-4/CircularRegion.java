@@ -5,6 +5,7 @@ public class CircularRegion extends EllipsoidalRegion{
     }
 
     public double getArea(){
-        return 0.0;
+        double area = super.getArea();
+        return area;
     }
 }

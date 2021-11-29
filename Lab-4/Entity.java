@@ -8,20 +8,19 @@ public abstract class Entity {
     public Entity(){
     }
 
-    public abstract void draw(java.awt.Graphics g);
-
     public void setColor(java.awt.Color c){
         lineColor = c;
     }
 
     public Color getColor(){
-
-        return null;
+        return lineColor;
     }
 
     public void rotate(double a){
         
     }
+
+    public abstract void draw(java.awt.Graphics g);
 
     public abstract void move( Vector v );    
 
