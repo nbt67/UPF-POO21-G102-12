@@ -10,6 +10,6 @@ public class TriangularRegion extends PolygonalRegion {
     }
     
     public double getArea(){
-        return 0.0;
+        return super.getArea();
     }
 }
