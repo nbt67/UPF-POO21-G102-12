@@ -1,4 +1,4 @@
-import java.sql.Date;
+import java.util.Date;
 
 public class Book {
     private String title;
@@ -7,10 +7,10 @@ public class Book {
     private String publicationPlace;
     private int ISBN;
 
-    public Book(String tlinit, String auinit, Date dtinit, String plinit, int isbn){
+    public Book(String tlinit, String auinit, Date date, String plinit, int isbn){
         title = tlinit;
         author = auinit;
-        publicationDate = dtinit;
+        publicationDate = date;
         publicationPlace = plinit;
         ISBN = isbn;
     }
