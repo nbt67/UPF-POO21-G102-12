@@ -1,38 +1,68 @@
 import java.util.Currency;
 
-public class ShoppingCart extends BookCollection{
+public class ShoppingCart extends BookCollection implements ShoppingCartInterface{
     private Catalog catalog;
     
     public ShoppingCart(Catalog catinit){
+        super();
         catalog = catinit;
         
         
-        String[] booktitles = booktitles();
-        for (int i = 0; i<collection.size(); i++){
-            String title = booktitles[i];
+        /*for (StockInterface element : catalog.collection){
+            String title = element.getBooktitle();
             int copies = numberOfCopies(title);
+            System.out.println(copies);
             catalog.removeCopies(copies, title);
-        }
+        }        
+        */
     }
 
     @Override
     public void addCopies(int numberOfCopies, String booktitle){
-        super.removeCopies(numberOfCopies, booktitle);
-        catalog.addCopies(numberOfCopies, booktitle);
+        catalog.removeCopies(numberOfCopies, booktitle);
+
+        for (StockInterface element : catalog.collection){
+            if (element.getBooktitle() == booktitle){
+                StockInterface stock = getStock(booktitle);
+                if(stock == null){
+                    Book book = element.getBook();
+                    double price = element.totalPrice();
+                    Currency currency = element.getCurrency();
+                    stock = new Stock(book, numberOfCopies, price, currency);
+                    collection.add(stock);
+                } else { 
+                    stock.addCopies(numberOfCopies);
+                }
+            }
+        }  
     }
     
     @Override
     public void removeCopies(int numberOfCopies, String booktitle){
-        super.addCopies(numberOfCopies, booktitle);
-        catalog.removeCopies(numberOfCopies, booktitle);
+        catalog.addCopies(numberOfCopies, booktitle);
+        
+        for (StockInterface element : catalog.collection){
+            if (element.getBooktitle() == booktitle){
+                StockInterface stock = getStock(booktitle);
+                if(stock == null){
+                    Book book = element.getBook();
+                    double price = element.totalPrice();
+                    Currency currency = element.getCurrency();
+                    stock = new Stock(book, numberOfCopies, price, currency);
+                    collection.add(stock);
+                } else { 
+                    stock.removeCopies(numberOfCopies);
+                }
+            }
+        }
     }
 
     public double totalPrice(){
-        double accum = 20;
-
-
-
-
+        double accum = 0;
+        for (StockInterface element : catalog.collection){
+            double price = element.totalPrice();
+            accum += price;
+        }
         return accum;
     }
 
@@ -40,8 +70,7 @@ public class ShoppingCart extends BookCollection{
         double price = totalPrice();
         Currency curr = Currency.getInstance("EUR");
         Payment p = new Payment();
-        System.out.println("checkout");
-        return p.doPayment( 2020200202, "Norbert", price, curr);
+        return p.doPayment(2020200202, "Norbert", price, curr);
     }
 
 }

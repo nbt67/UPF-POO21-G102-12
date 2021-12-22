@@ -13,8 +13,8 @@ public class Catalog extends BookCollection{
 
         Date date = new Date();
 
-        for (int i = 0; i<list.size(); i++){     //Change 10 
-            String[] book = list.get(i);
+        for (String[] element : list){     //Change 10 
+            String[] book = element;
             
             String title = book[0];
 
@@ -41,7 +41,6 @@ public class Catalog extends BookCollection{
             Book book1 = new Book(title, author, date, place, isbn);
             
             Stock s1 = new Stock(book1, copies, price, currency);
-            System.out.println("iterations" + i);
             collection.add(s1);
         }
     }

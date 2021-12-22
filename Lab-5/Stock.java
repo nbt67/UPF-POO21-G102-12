@@ -1,6 +1,6 @@
 import java.util.Currency;
 
-public class Stock {
+public class Stock implements StockInterface{
     private Book book;
     private int copies;
     private double price;
@@ -30,11 +30,16 @@ public class Stock {
     }
 
     public void removeCopies(int numberOfCopies){
-        copies = copies - numberOfCopies;
+        if (numberOfCopies <= copies){
+            copies = copies - numberOfCopies;
+        }
     }
 
-    public double totalPrice(){
-        return price;
+    public double totalPrice(){        
+        return price*copies;
     }
 
+    public Currency getCurrency(){
+        return currency;
+    }
 }
