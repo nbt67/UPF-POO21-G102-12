@@ -9,9 +9,6 @@ public class Catalog extends BookCollection{
         LinkedList<String[]> list = new LinkedList<String[]>();
         list = readCatalog("Lab-5/books.xml");
 
-        //LinkedList<Stock> stockList = new LinkedList<Stock>();
-        HashSet<StockInterface> stockList = new HashSet< StockInterface >();
-
         Date date = new Date();
         String[] titleArray = list.get(0);
         String[] authorArray = list.get(1);
@@ -46,8 +43,8 @@ public class Catalog extends BookCollection{
             int copies = Integer.parseInt( copiesString );
 
             Book book1 = new Book(title, author, date, place, isbn);
-            StockInterface s1 = new StockInterface(book1, copies, price, currency);
-            collection.add(s1);
+            StockInterface s1 = (StockInterface) new Stock(book1, copies, price, currency);
+            collection.add(s1);            
         }
     }
 }
