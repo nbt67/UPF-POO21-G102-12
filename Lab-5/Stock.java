@@ -2,7 +2,7 @@ import java.util.Currency;
 
 public class Stock implements StockInterface{
     private Book book;
-    private int copies;
+    protected int copies;
     private double price;
     private Currency currency;
 
@@ -30,9 +30,7 @@ public class Stock implements StockInterface{
     }
 
     public void removeCopies(int numberOfCopies){
-        if (numberOfCopies <= copies){
-            copies = copies - numberOfCopies;
-        }
+        copies = copies - numberOfCopies;
     }
 
     public double totalPrice(){        
