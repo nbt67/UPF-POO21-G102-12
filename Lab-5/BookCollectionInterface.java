@@ -1,5 +1,5 @@
 
-package bookstore;
+/*package bookstore;*/
 
 public interface BookCollectionInterface {
 	public String[] booktitles();
