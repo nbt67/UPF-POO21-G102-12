@@ -2,13 +2,15 @@ import java.util.LinkedList;
 import java.util.Date;
 import java.text.*;
 import java.util.Currency;
+import java.util.HashSet;
 
 public class Catalog extends BookCollection{
     public Catalog(){
         LinkedList<String[]> list = new LinkedList<String[]>();
         list = readCatalog("Lab-5/books.xml");
 
-        LinkedList<Stock> stockList = new LinkedList<Stock>();
+        //LinkedList<Stock> stockList = new LinkedList<Stock>();
+        HashSet<StockInterface> stockList = new HashSet< StockInterface >();
 
         Date date = new Date();
         String[] titleArray = list.get(0);
@@ -44,8 +46,8 @@ public class Catalog extends BookCollection{
             int copies = Integer.parseInt( copiesString );
 
             Book book1 = new Book(title, author, date, place, isbn);
-            Stock s1 = new Stock(book1, copies, price, currency);
-            stockList.add(s1);
+            StockInterface s1 = new StockInterface(book1, copies, price, currency);
+            collection.add(s1);
         }
     }
 }
