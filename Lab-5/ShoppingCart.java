@@ -1,3 +1,5 @@
+import java.util.Currency;
+
 public class ShoppingCart extends BookCollection{
     private Catalog catalog;
     
@@ -9,7 +11,7 @@ public class ShoppingCart extends BookCollection{
         for (int i = 0; i<collection.size(); i++){
             String title = booktitles[i];
             int copies = numberOfCopies(title);
-            super.removeCopies(copies, title);
+            catalog.removeCopies(copies, title);
         }
     }
 
@@ -26,11 +28,20 @@ public class ShoppingCart extends BookCollection{
     }
 
     public double totalPrice(){
-        return catalog;
+        double accum = 20;
+
+
+
+
+        return accum;
     }
 
     public String checkout(){
-        return "";
+        double price = totalPrice();
+        Currency curr = Currency.getInstance("EUR");
+        Payment p = new Payment();
+        System.out.println("checkout");
+        return p.doPayment( 2020200202, "Norbert", price, curr);
     }
 
 }

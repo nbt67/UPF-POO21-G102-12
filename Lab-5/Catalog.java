@@ -6,45 +6,43 @@ import java.util.HashSet;
 
 public class Catalog extends BookCollection{
     public Catalog(){
+        super();
         LinkedList<String[]> list = new LinkedList<String[]>();
         list = readCatalog("Lab-5/books.xml");
+        //HashSet< StockInterface > stock = new HashSet< StockInterface >();
 
         Date date = new Date();
-        String[] titleArray = list.get(0);
-        String[] authorArray = list.get(1);
-        String[] dateArray  = list.get(2);
-        String[] placeArray = list.get(3);
-        String[] ISBNArray = list.get(4);
-        String[] priceArray = list.get(5);
-        String[] currencyArray = list.get(6);
-        String[] copiesArray = list.get(7);
 
-        for (int i = 0; i<list.size(); i++){
-            String title = titleArray[i];
+        for (int i = 0; i<list.size(); i++){     //Change 10 
+            String[] book = list.get(i);
+            
+            String title = book[0];
 
-            String author = authorArray[i];
+            String author = book[1];
 
-            String dateString = dateArray[i];
+            String dateString = book[2];
             try { date = new SimpleDateFormat().parse( dateString ); }
-            catch( Exception e ) {}         
+            catch( Exception e ) {}   
+                        
+            String place = book[3];
 
-            String place = placeArray[i];
-
-            String isbnString = ISBNArray[i];
-            int isbn = Integer.parseInt( isbnString );
-
-            String priceString = priceArray[i];
+            String isbnString = book[4];
+            long isbn = Long.parseLong( isbnString );
+            
+            String priceString = book[5];
             double price = Double.parseDouble( priceString ); 
 
-            String currencyString = currencyArray[i];
+            String currencyString = book[6];
             Currency currency = Currency.getInstance( currencyString );
 
-            String copiesString = copiesArray[i];
+            String copiesString = book[7];
             int copies = Integer.parseInt( copiesString );
-
+                        
             Book book1 = new Book(title, author, date, place, isbn);
-            StockInterface s1 = (StockInterface) new Stock(book1, copies, price, currency);
-            collection.add(s1);            
+            
+            Stock s1 = new Stock(book1, copies, price, currency);
+            System.out.println("iterations" + i);
+            collection.add(s1);
         }
     }
 }

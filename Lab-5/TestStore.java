@@ -4,5 +4,7 @@ public class TestStore {
         ShoppingCart shoppingCart1 = new ShoppingCart(c);
 
         shoppingCart1.addCopies(2, "The Hobbit");
+        String s = shoppingCart1.checkout();
+        System.out.println(s);
     }
 }

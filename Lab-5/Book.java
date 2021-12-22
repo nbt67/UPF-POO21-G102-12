@@ -5,9 +5,9 @@ public class Book {
     private String author;
     private Date publicationDate;
     private String publicationPlace;
-    private int ISBN;
+    private long ISBN;
 
-    public Book(String tlinit, String auinit, Date date, String plinit, int isbn){
+    public Book(String tlinit, String auinit, Date date, String plinit, long isbn){
         title = tlinit;
         author = auinit;
         publicationDate = date;
@@ -31,7 +31,7 @@ public class Book {
         return publicationPlace;
     }
 
-    public int getISBN(){
+    public long getISBN(){
         return ISBN;
     }
 }
